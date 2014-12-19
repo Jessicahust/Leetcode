@@ -1,0 +1,25 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class Solution {
+public:
+    string convert(string s, int nRows) {
+        int i,j;
+        string str;
+        for(i=0;i<nRows;i++)
+        {
+            for(j=i;j<s.length();j+=2*(nRows-1))
+            {
+                str.push_back(s[j]);
+                if(i>0&&i<nRows-1)
+                {
+                    if(j+nRows-1<s.length())
+                        str.push_back(s[j+nRows-1]);
+                }
+            }
+        }
+        
+    }
+};

@@ -1,0 +1,33 @@
+#include<iostream>
+#include<vector>
+#include<climits>
+using namespace std;
+
+class Solution {
+public:
+    int findPeakElement(const vector<int> &num) {
+        if(num.empty())
+            return -1;
+        int i=0;
+        int n=num.size();
+        while(i<n-1)
+        {
+            if(i==0&&num[i]>num[i+1])
+                return i;
+            else if(i==0)
+                continue;
+            if(num[i]>num[i-1]&&num[i]>num[i+1])
+                return i;
+            i++;
+        }
+        if(i==n-1&&n)
+        return -1;
+    }
+};
+
+int main()
+{
+    Solution s;
+    vector<int> vec={1,2,3,1};
+    cout<<s.findPeakElement(vec)<<endl;
+}

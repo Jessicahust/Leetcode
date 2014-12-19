@@ -1,0 +1,26 @@
+#include<iostream>
+#include<string>
+#include<stack>
+using namespace std;
+
+class Solution {
+public:
+    bool isValid(string s) {
+        int index=s.length()-1;
+        stack<char> s;
+        while(index<s.length())
+        {
+            switch(s[index])
+            {
+            case '(' :
+            case '[' :
+            case '{' :
+                s.push(s[index]);
+                break;
+            case ']':
+                case ''
+                
+            }
+        }
+    }
+};

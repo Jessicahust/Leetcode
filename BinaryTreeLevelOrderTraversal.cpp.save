@@ -1,0 +1,58 @@
+#include<iostream>
+#include<new>
+#include<vector>
+using namespace std;
+
+//Definition for binary tree
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution {
+public:
+    vector<vector<int> > levelOrder(TreeNode *root) {
+        vector<vector<int> > vec;
+        vector<vector<TreeNode*> > rvec;
+        int i=0;
+        if(root==NULL)
+            return vector<vector<int> >();
+        vec[0].push_back(root->val);
+        vec[0].push_back(root);
+        if(vec.size())
+        {
+            for(i=0;i<vec[vec.size()-1].size();i++)
+            {
+                TreeNode *tmp=rvec[rvec.size()-1][i];
+                if(tmp->left)
+                {
+                    vec[]
+                }
+            }
+        }
+        return vec;
+    }
+    void createTree(TreeNode *&root)
+    {
+        int i;
+        cin>>i;
+        if(i!=0)
+        {
+            root=new TreeNode(i);
+            if(root==NULL)
+                return;
+            createTree(root->left);
+            createTree(root->right);
+        }
+    }
+};
+
+int main()
+{
+    Solution s;
+    TreeNode *root;
+    s.createTree(root);
+}

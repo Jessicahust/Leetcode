@@ -1,0 +1,76 @@
+#include<iostream>
+#include<cstdlib>
+#include<vector>
+using namespace std;
+
+//Definition for binary tree
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution
+{
+public:
+    int PathSum(TreeNode *root,vector<int> path)
+    {
+        int sum=0;
+        if(root)
+        {
+            path.push_back(root->val);
+            if(root->left==root->right)
+            {
+                for(auto v:path)
+                {
+                    cout<<v<<" ";
+                    sum+=v;
+                }
+                cout<<"sum= "<<sum<<endl;
+                return sum;
+            }
+            PathSum(root->left,path);
+            PathSum(root->right,path);
+        }
+        return 0;
+    }
+    bool hasPathSum(TreeNode *root, int sum)
+    {
+        vector<int> path;
+            if(sum==PathSum(root,path))
+            {
+                for(auto v:path)
+                    cout<<v<<"->";
+                cout<<endl;
+                return true;
+            }
+        
+        return false;
+    }
+    void createTree(TreeNode *&root)
+    {
+        int i;
+        cin>>i;
+        if(i!=0)
+        {
+            root=(TreeNode*)malloc(sizeof(struct TreeNode));
+            if(root==NULL)
+                return;
+            root->val=i;
+            root->left=root->right=NULL;
+            createTree(root->left);
+            createTree(root->right);
+        }
+    }
+};
+
+int main()
+{
+    Solution s;
+    TreeNode *root;
+    s.createTree(root);
+    if(s.hasPathSum(root,6))
+        cout<<"exist"<<endl;
+}

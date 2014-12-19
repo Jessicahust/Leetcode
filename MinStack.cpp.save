@@ -1,0 +1,55 @@
+#include<iostream>
+#include<stack>
+using namespace std;
+
+class MinStack {
+public:
+    void push(int x) {
+        int tmp;
+        if(!s1.empty()&&!s2.empty())
+        {
+            s1.push(x);
+        }
+        if(!s1.empty()&&s2.empty())
+        {
+            tmp=s1.top();
+            if(x<=tmp)
+                s1.push(x);
+            else
+                s2.push(x);
+        }
+        if(s1.empty()&&!s2.empty())
+        {
+            
+        }
+    }
+
+    void pop() {
+        if(!s1.empty())
+            s1.pop();
+    }
+
+    int top() {
+        if(!s1.empty())
+            return s1.top();
+        return 0;
+    }
+
+    int getMin() {
+        if(!s1.empty())
+            return s1.top();
+        return 0;
+    }
+private:
+    stack<int> s1;
+    stack<int> s2;
+};
+
+int main()
+{
+    MinStack minstack;
+    minstack.push(100);
+    minstack.push(24);
+    minstack.push(30);
+    cout<<minstack.getMin()<<endl;
+}

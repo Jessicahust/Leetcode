@@ -1,0 +1,107 @@
+#include<iostream>
+#include<new>
+using namespace std;
+
+
+// Definition for singly-linked list with a random pointer.
+struct RandomListNode
+{
+    int label;
+    RandomListNode *next, *random;
+    RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
+};
+
+class Solution
+{
+public:
+    RandomListNode *copyRandomList(RandomListNode *head)
+    {
+        if(head==NULL)
+            return NULL;
+        RandomListNode *p=head;
+        while(p)
+        {
+            RandomListNode *next=p->next;
+            p->next=NULL;
+            RandomListNode *q=new RandomListNode(p->label);
+            p->next=q;
+            q->next=next;
+            p=next;
+        }
+        p=head;
+        while(p)
+        {
+            if(p->random)
+                p->next->random=p->random->next;
+            p=p->next->next;
+        }
+        RandomListNode *L=NULL;
+        p=head->next;
+        RandomListNode *pp=head;
+        RandomListNode *qq=L;
+        int flag=1;
+        while(p)
+        {
+            RandomListNode *tmp=p->next;
+            p->next=NULL;
+            if(!flag)
+            {
+                pp->next=p;
+                pp=p;
+                flag=1;
+            }
+            else
+            {
+                if(L==NULL)
+                {
+                    L=p;
+                    qq=p;
+                }
+                else
+                {
+                    qq->next=p;
+                    qq=p;
+                }
+                flag=0;
+            }
+            p=tmp;
+        }
+        return head;
+    }
+    void createList(RandomListNode *&head)
+    {
+        RandomListNode *p=NULL;
+        int i=0;
+        int arr[10]= {10,9,8,7,6,5,4,3,2,1};
+        for(i=0; i<1; i++)
+        {
+            if(head==NULL)
+            {
+                head=new RandomListNode(arr[i]);
+                if(head==NULL)
+                    return;
+            }
+            else
+            {
+                p=new RandomListNode(arr[i]);
+                p->next=head;
+                p->random=head;
+                head=p;
+            }
+        }
+    }
+};
+
+int main()
+{
+    Solution s;
+    RandomListNode *L=NULL;
+    s.createList(L);
+    RandomListNode *L2=s.copyRandomList(L);
+    RandomListNode *p=L2;
+    while(p)
+    {
+        cout<<p->label<<" ";
+        p=p->random;
+    }
+}

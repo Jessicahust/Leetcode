@@ -1,0 +1,22 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution {
+public:
+    void setZeroes(vector<vector<int> > &matrix) {
+        if(matrix.empty()||matrix[0].empty())
+            return;
+        int i,j;
+        for(i=0;i<(int)matrix.size();i++)
+        {
+            for(j=0;j<(int)matrix[0].size();j++)
+            {
+                if(matrix[i][j]==0)
+                {
+                    break;
+                }
+            }
+        }
+    }
+};

@@ -1,0 +1,61 @@
+#include<iostream>
+#include<vector>
+#include<stack>
+using namespace std;
+
+class Solution
+{
+public:
+    void nextPermutation(vector<int> &num)
+    {
+        if(num.empty()||num.size()==1)
+            return;
+        int i,j;
+        stack<int> st;
+        for(i=int(num.size()-1); i>0; i--)
+        {
+            if(num[i]<=num[i-1])
+                continue;
+            else
+                break;
+        }
+        if(i==0)
+        {
+            for(i=0; i<num.size(); i++)
+            {
+                st.push(num[i]);
+            }
+            while(!st.empty())
+            {
+                num.push_back(st.top());
+                st.pop();
+            }
+            return;
+        }
+        j=i-1;
+        for(i; i<(int)num.size(); i++)
+        {
+            st.push(num[i]);
+        }
+        while(!st.empty())
+        {
+            num.push_back(st.top());
+            st.pop();
+        }
+        for(i=j+1;i<(int)num.size();i++)
+            if(num[i]<=num[j])
+                continue;
+        swap(num[i],swap[j]);
+    }
+    void swap(int *a)
+};
+
+int main()
+{
+    Solution s;
+    vector<int> vec={1,2,3};
+    s.nextPermutation(vec)
+    for(auto a:vec)
+        cout<<a<<" ";
+    cout<<endl;
+}

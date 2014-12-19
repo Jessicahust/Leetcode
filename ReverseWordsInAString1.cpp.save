@@ -1,0 +1,56 @@
+#include<iostream>
+#include<string>
+#include<sstream>
+using namespace std;
+
+class Solution
+{
+public:
+    void reverseWords(string &s)
+    {
+        int i,j,k;
+        i=0;
+        j=s.length()-1;
+        while(i<j)
+        {
+            swap(&s[i],&s[j]);
+            i++;
+            j--;
+        }
+        cout<<s.length()<<endl;
+        i=j=0;
+        while(i<s.length())
+        {
+            while(j<s.length()&&s[j]!=' ') j++;
+            k=j;
+            if(j<s.length())
+            {
+                j--;
+                while(i<j)
+                {
+                    swap(&s[i],&s[j]);
+                    i++;
+                    j--;
+                }
+            }
+        }
+        cout<<s<<endl;
+    }
+
+    void swap(char *a,char *b)
+    {
+        char temp=*a;
+        *a=*b;
+        *b=temp;
+    }
+};
+
+int main()
+{
+    Solution s;
+    string ss="the sky is blue";
+    cout<<ss.length()<<endl;
+    s.reverseWords(ss);
+    cout<<ss.length()<<endl;
+}
+

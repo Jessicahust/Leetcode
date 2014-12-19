@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+#include<stack>
+using namespace std;
+
+class Solution
+{
+public:
+    int largestRectangleArea(vector<int> &height)
+    {
+        if(height.empty())
+            return 0;
+        int maxArea=0;
+        int i=0;
+        int n=height.size();
+        stack<int> st;
+        st.push(i);
+        for(i=1;i<n;i++)
+        {
+            if(st.empty()||height[i]>st.top())
+                st.push(i);
+            else
+            {
+                int left=st.top();
+                st.pop();
+                int Area=height[left]*(i-left);
+                maxArea=max(Area,maxArea);
+            }
+        }
+    }
+};

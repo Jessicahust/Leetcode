@@ -1,0 +1,33 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class Solution {
+public:
+    vector<string> letterCombinations(string digits) {
+        if(digits.empty())
+            return vector<string>();
+        vector<string> ret(1,"");
+        string str[]={" ","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"};
+        int i,j,k;
+        for(i=0;i<digits.size();i++)
+        {
+            string s=str[digits[i]-'0'];
+            vector<string> tmp=ret;
+            ret.clear();
+            for(j=0;j<s.size();j++)
+            {
+                for(k=0;k<tmp.size();k++)
+                    ret.push_back(tmp[k]+s[j]);
+            }
+        }
+        return ret;
+    }
+};
+
+int main()
+{
+    Solution s;
+    vector<string> result=s.letterCombinations("")
+}

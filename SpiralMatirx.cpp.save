@@ -1,0 +1,60 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<int> spiralOrder(vector<vector<int> > &matrix)
+    {
+        if(matrix.empty()||matrix[0].empty())
+            return vector<int>();
+        vector<int> ret;
+        int m=matrix.size();
+        int n=matrix[0].size();
+        int count=m*n;
+        int i=0;
+        int j=0;
+        while(count)
+        {
+            if(count==1)
+            {
+                ret.push_back(matrix[i][j]);
+                break;
+            }
+            for(; j<n--1; j++)
+            {
+                ret.push_back(matrix[i][j]);
+                count--;
+            }
+            for(; i<m-1; i++)
+            {
+                ret.push_back(matrix[i][j]);
+                count--;
+            }
+            for(; j>n-1; j--)
+            {
+                ret.push_back(matrix[i][j]);
+                count--;
+            }
+            for(; i>j; i--)
+            {
+                ret.push_back(matrix[i][j]);
+                count--;
+            }
+            i++;
+            j++;
+        }
+        return ret;
+    }
+};
+
+int main()
+{
+    Solution s;
+    vector<vector<int> > vec= {{1}};
+    vector<int> result=s.spiralOrder(vec);
+    for(auto a:result)
+        cout<<a<<" ";
+    cout<<endl;
+}

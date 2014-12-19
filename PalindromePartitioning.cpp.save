@@ -1,0 +1,43 @@
+#include<iostream>
+#include<vector>
+#include<string>
+using namespace std;
+
+class Solution {
+public:
+    vector<vector<string>> partition(string s) {
+        if(s.empty())
+            return vector<vector<strng> >();
+        vector<vector<string> > ret;
+        vector<string> path;
+        helper(s,start,ret,path);
+        return ret;
+    }
+    void helper(string s,int start,vector<vector<string> > &ret,vector<string> &path)
+    {
+        int n=path.size();
+        int i;
+        int sum=0;
+        for(int j=0;j<n;j++)
+        {
+            sum+=path[i].size();
+        }
+        if(sum==s.size())
+        {
+            ret.push_back(path);
+            return;
+        }
+        for(i=1;i<=s.size();i++)
+        {
+            string tmp=s.substr(start,i);
+            if(!isPalindrome(tmp))
+                continue;
+            helper(s,start+i,ret,path);
+            path.pop_back();
+        }
+    }
+    bool isPalindrome(string s)
+    {
+        
+    }
+};

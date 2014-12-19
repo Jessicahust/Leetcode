@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+#include<cstring>
+using namespace std;
+
+class Solution {
+public:
+    int minCut(string s)
+    {
+        if(s.empty())
+            return 0;
+        int n=s.length();
+        bool matrix[n][n];
+        int cut[n+1];
+        memset(matrix,false,sizeof(matrix));
+        memset(cut,0,sizeof(cut));
+        int i,j;
+        for(i=0;i<n;i++)
+            cut[i]=n-i;
+        for(i=n-1;i>=0;i--)
+        {
+            for(j=i;j<n;j++)
+            {
+                if((s[i]==s[j]&&j-i<2)||(s[i]==s[j]&&matrix[i+1][j-1]))
+                {
+                    matrix[i][j]=true;
+                    cut[i]=min(cut[i],cut[j+1]+1);
+                }
+            }
+        }
+        return cut[0]-1;
+    }
+};
+
+int main()
+{
+    Solution s;
+    int result=s.minCut(string("ababababababababababababcbabababababababababababa"));
+    cout<<result<<endl;
+}

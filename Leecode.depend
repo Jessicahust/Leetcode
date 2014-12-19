@@ -1,0 +1,447 @@
+# depslib dependency file v1.0
+1415870817 source:d:\codeblocks\c c++ project\leecode\triangle.cpp
+	<iostream>
+	<vector>
+
+1415873490 source:d:\codeblocks\c c++ project\leecode\triangle ii.cpp
+	<iostream>
+	<vector>
+
+1415880434 source:d:\codeblocks\c c++ project\leecode\pathsum.cpp
+	<iostream>
+	<cstdlib>
+	<vector>
+
+1415891463 source:d:\codeblocks\c c++ project\leecode\mergesortedarray.cpp
+	<iostream>
+
+1415923423 source:d:\codeblocks\c c++ project\leecode\removeduplicates.cpp
+	<iostream>
+	<new>
+
+1416745399 source:d:\codeblocks\c c++ project\leecode\addbinary.cpp
+	<iostream>
+	<string>
+	<vector>
+
+1415950100 source:d:\codeblocks\c c++ project\leecode\mergetwosortedlists.cpp
+	<iostream>
+	<new>
+
+1415956509 source:d:\codeblocks\c c++ project\leecode\strstr.cpp
+	<iostream>
+	<cstring>
+
+1415966204 source:d:\codeblocks\c c++ project\leecode\removeduplicatesfromsortedarray.cpp
+	<iostream>
+
+1415967230 source:d:\codeblocks\c c++ project\leecode\validparentheses.cpp
+	<iostream>
+	<string>
+	<stack>
+
+1415970305 source:d:\codeblocks\c c++ project\leecode\removenthfromend.cpp
+	<iostream>
+	<new>
+
+1416012102 source:d:\codeblocks\c c++ project\leecode\palindromenumber.cpp
+	<iostream>
+
+1416019859 source:d:\codeblocks\c c++ project\leecode\stringtointeger.cpp
+	<iostream>
+	<cctype>
+	<climits>
+
+1416024583 source:d:\codeblocks\c c++ project\leecode\reverseinteger.cpp
+	<iostream>
+	<climits>
+
+1416036163 source:d:\codeblocks\c c++ project\leecode\zigzagconversion.cpp
+	<iostream>
+	<string>
+
+1416041112 source:d:\codeblocks\c c++ project\leecode\binarytreelevelordertraversal.cpp
+	<iostream>
+	<new>
+	<vector>
+
+1416042674 source:d:\codeblocks\c c++ project\leecode\sametree.cpp
+	<iostream>
+	<new>
+
+1416052256 source:d:\codeblocks\c c++ project\leecode\insertionsortlist.cpp
+	<iostream>
+	<new>
+
+1416061628 source:d:\codeblocks\c c++ project\leecode\populatingnextrightpointersineachnode.cpp
+	<iostream>
+	<new>
+	<queue>
+
+1416101254 source:d:\codeblocks\c c++ project\leecode\pathsum2.cpp
+	<iostream>
+	<new>
+	<vector>
+
+1416388855 source:d:\codeblocks\c c++ project\leecode\longestpalindromicsubstring.cpp
+	<iostream>
+	<string>
+	<cstring>
+
+1416112228 source:d:\codeblocks\c c++ project\leecode\binarytreepreordertraversal.cpp
+	<iostream>
+	<new>
+	<vector>
+	<stack>
+
+1416124201 source:d:\codeblocks\c c++ project\leecode\linkedlistcycleii.cpp
+	<iostream>
+	<new>
+	<iostream>
+	<new>
+
+1416125304 source:d:\codeblocks\c c++ project\leecode\linkedlistcycle.cpp
+	<iostream>
+	<new>
+
+1416129273 source:d:\codeblocks\c c++ project\leecode\binarytreezigzaglevelordertraversal.cpp
+	<iostream>
+	<new>
+	<vector>
+	<stack>
+
+1416139596 source:d:\codeblocks\c c++ project\leecode\twosum.cpp
+	<map>
+	<iostream>
+	<vector>
+
+1416144215 source:d:\codeblocks\c c++ project\leecode\wordbreak.cpp
+	<iostream>
+	<unordered_set>
+	<string>
+	<cstring>
+
+1416148260 source:d:\codeblocks\c c++ project\leecode\findminimuminrotatedsortedarray.cpp
+	<iostream>
+	<vector>
+
+1416184309 source:d:\codeblocks\c c++ project\leecode\validatebinarysearchtree.cpp
+	<iostream>
+	<new>
+	<vector>
+	<climits>
+
+1416189705 source:d:\codeblocks\c c++ project\leecode\symmetrictree.cpp
+	<iostream>
+	<new>
+	<vector>
+
+1416232029 source:d:\codeblocks\c c++ project\leecode\binarytreeinordertraversal.cpp
+	<iostream>
+	<new>
+	<vector>
+	<stack>
+
+1416236961 source:d:\codeblocks\c c++ project\leecode\reverselinkedlistii.cpp
+	<iostream>
+	<new>
+
+1416276552 source:d:\codeblocks\c c++ project\leecode\countandsay.cpp
+	<iostream>
+	<string>
+	<sstream>
+
+1416286831 source:d:\codeblocks\c c++ project\leecode\sortlist.cpp
+	<iostream>
+	<new>
+
+1416309318 source:d:\codeblocks\c c++ project\leecode\partitionlist.cpp
+	<iostream>
+	<new>
+
+1416315524 source:d:\codeblocks\c c++ project\leecode\validsudoku.cpp
+	<iostream>
+	<set>
+	<vector>
+
+1416317190 source:d:\codeblocks\c c++ project\leecode\swapnodesinpairs.cpp
+	<iostream>
+	<new>
+
+1416321219 source:d:\codeblocks\c c++ project\leecode\removeduplicatesfromsortedlistii.cpp
+	<iostream>
+	<new>
+
+1416361487 source:d:\codeblocks\c c++ project\leecode\maximumproductsubarray.cpp
+	<iostream>
+
+1416371635 source:d:\codeblocks\c c++ project\leecode\removeduplicatesfromsortedarrayii.cpp
+	<iostream>
+
+1416381236 source:d:\codeblocks\c c++ project\leecode\sortcolors1.cpp
+	<iostream>
+
+1416385382 source:d:\codeblocks\c c++ project\leecode\searcha2dmatrix.cpp
+	<iostream>
+	<vector>
+
+1416394068 source:d:\codeblocks\c c++ project\leecode\setmatrixzeroes.cpp
+	<iostream>
+	<vector>
+	<new>
+	<cstring>
+
+1416396255 source:d:\codeblocks\c c++ project\leecode\setmatrixzeroes2.cpp
+	<iostream>
+	<vector>
+	<new>
+	<cstring>
+
+1416405609 source:d:\codeblocks\c c++ project\leecode\reversewordsinastring.cpp
+	<iostream>
+	<string>
+	<sstream>
+
+1416408837 source:d:\codeblocks\c c++ project\leecode\reversewordsinastring1.cpp
+	<iostream>
+	<string>
+	<sstream>
+
+1416449546 source:d:\codeblocks\c c++ project\leecode\reversewordsinastring2.cpp
+	<iostream>
+	<string>
+	<sstream>
+	<stack>
+
+1416466216 source:d:\codeblocks\c c++ project\leecode\uniquepathsii.cpp
+	<iostream>
+	<vector>
+
+1417436533 source:d:\codeblocks\c c++ project\leecode\spiralmatirx.cpp
+	<iostream>
+	<vector>
+
+1416490774 source:d:\codeblocks\c c++ project\leecode\spiralmatirxii.cpp
+	<iostream>
+	<vector>
+
+1416537740 source:d:\codeblocks\c c++ project\leecode\evaluatereversepolishnotation.cpp
+	<iostream>
+	<stack>
+	<vector>
+	<string>
+	<cstdlib>
+
+1416546787 source:d:\codeblocks\c c++ project\leecode\permutations.cpp
+	<iostream>
+	<vector>
+
+1416572556 source:d:\codeblocks\c c++ project\leecode\balancedbinarytree.cpp
+	<iostream>
+	<new>
+	<vector>
+	<cmath>
+
+1416578273 source:d:\codeblocks\c c++ project\leecode\convertsortedarraytobinarysearchtree.cpp
+	<iostream>
+	<new>
+	<vector>
+	<cmath>
+
+1416579820 source:d:\codeblocks\c c++ project\leecode\convertsortedarraytobinarysearchtree1.cpp
+	<iostream>
+	<new>
+	<vector>
+	<cmath>
+
+1416625955 source:d:\codeblocks\c c++ project\leecode\populatingnextrightpointersineachnodeii.cpp
+	<iostream>
+	<new>
+	<queue>
+
+1416646372 source:d:\codeblocks\c c++ project\leecode\findminimuminrotatedsortedarrayii.cpp
+	<iostream>
+	<vector>
+
+1416703548 source:d:\codeblocks\c c++ project\leecode\longestconsecutivesequence.cpp
+	<iostream>
+	<vector>
+	<set>
+
+1416709429 source:d:\codeblocks\c c++ project\leecode\subsets.cpp
+	<iostream>
+	<vector>
+	<set>
+
+1416714620 source:d:\codeblocks\c c++ project\leecode\subsetsii.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
+1416715128 source:d:\codeblocks\c c++ project\leecode\convertsortedlisttobinarysearchtree.cpp
+	<iostream>
+	<new>
+	<vector>
+	<cmath>
+
+1416733420 source:d:\codeblocks\c c++ project\leecode\jumpgameii.cpp
+	<iostream>
+	<stack>
+
+1416791982 source:d:\codeblocks\c c++ project\leecode\constructbinarytreefrompreorderandinordertraversal.cpp
+	<iostream>
+	<new>
+	<vector>
+
+1416793960 source:d:\codeblocks\c c++ project\leecode\constructbinarytreefrompreorderandinordertraversal1.cpp
+	<iostream>
+	<new>
+	<vector>
+
+1416794576 source:d:\codeblocks\c c++ project\leecode\constructbinarytreefrompreorderandpostordertraversal.cpp
+	<iostream>
+	<new>
+	<vector>
+
+1416814648 source:d:\codeblocks\c c++ project\leecode\sqrt(x).cpp
+	<iostream>
+
+1416830994 source:d:\codeblocks\c c++ project\leecode\insertinterval.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
+1416834588 source:d:\codeblocks\c c++ project\leecode\multiplystrings.cpp
+	<iostream>
+	<string>
+	<vector>
+
+1416837599 source:d:\codeblocks\c c++ project\leecode\longestvalidparentheses.cpp
+	<iostream>
+	<string>
+	<stack>
+
+1416880735 source:d:\codeblocks\c c++ project\leecode\3sum.cpp
+	<iostream>
+	<vector>
+	<map>
+
+1416891341 source:d:\codeblocks\c c++ project\leecode\3sumclosest.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<climits>
+	<cmath>
+
+1416893496 source:d:\codeblocks\c c++ project\leecode\4sum.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+
+1416965030 source:d:\codeblocks\c c++ project\leecode\copylistwithrandompointer.cpp
+	<iostream>
+	<new>
+
+1416969844 source:d:\codeblocks\c c++ project\leecode\recoverbinarysearchtree.cpp
+	<iostream>
+	<new>
+
+1416989812 source:d:\codeblocks\c c++ project\leecode\maxpointsonaline.cpp
+	<iostream>
+	<map>
+	<vector>
+	<set>
+
+1416989355 source:d:\codeblocks\c c++ project\leecode\maxpointsonaline1.cpp
+	<iostream>
+	<map>
+	<vector>
+	<set>
+	<unordered_map>
+	<climits>
+
+1417007549 source:d:\codeblocks\c c++ project\leecode\dividetwointegers1.cpp
+	<iostream>
+	<climits>
+	<cmath>
+
+1417049798 source:d:\codeblocks\c c++ project\leecode\combinationsum.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+
+1417068466 source:d:\codeblocks\c c++ project\leecode\lettercombinationsofaphonenumber1.cpp
+	<iostream>
+	<vector>
+	<string>
+
+1417144359 source:d:\codeblocks\c c++ project\leecode\intersectionoftwolinkedlists.cpp
+	<iostream>
+	<new>
+	<cmath>
+
+1417164879 source:d:\codeblocks\c c++ project\leecode\palindromepartitioning.cpp
+	<iostream>
+	<vector>
+	<string>
+
+1417226757 source:d:\codeblocks\c c++ project\leecode\searchforarange.cpp
+	<iostream>
+	<vector>
+	<set>
+
+1417232826 source:d:\codeblocks\c c++ project\leecode\besttimetobuyandsellstockiii.cpp
+	<iostream>
+	<vector>
+
+1417263772 source:d:\codeblocks\c c++ project\leecode\binarytreemaximumpathsum.cpp
+	<iostream>
+	<new>
+	<climits>
+
+1417274502 source:d:\codeblocks\c c++ project\leecode\wordladder1.cpp
+	<iostream>
+	<string>
+	<unordered_set>
+	<queue>
+
+1417349735 source:d:\codeblocks\c c++ project\leecode\n-queens ii.cpp
+	<iostream>
+	<vector>
+	<cmath>
+
+1417359595 source:d:\codeblocks\c c++ project\leecode\wordbreakii.cpp
+	<iostream>
+	<unordered_set>
+	<string>
+	<cstring>
+	<vector>
+
+1416746566 source:d:\codeblocks\c c++ project\leecode\permutationsii.cpp
+	<iostream>
+	<vector>
+
+1417413296 source:d:\codeblocks\c c++ project\leecode\permutationsii2.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+	<cstring>
+
+1417421954 source:d:\codeblocks\c c++ project\leecode\sudokusolver.cpp
+	<iostream>
+	<vector>
+
+1417483392 source:d:\codeblocks\c c++ project\leecode\substringwithconcatenationofallwords.cpp
+	<iostream>
+	<vector>
+	<string>
+	<map>
+
+1417489220 source:d:\codeblocks\c c++ project\leecode\wordbreakii2.cpp
+	<iostream>
+	<unordered_set>
+	<string>
+	<cstring>
+	<vector>
+	<algorithm>
+

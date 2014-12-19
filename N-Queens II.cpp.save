@@ -1,0 +1,47 @@
+#include<iostream>
+#include<vector>
+#include<cmath>
+using namespace std;
+
+class Solution {
+public:
+   
+    int totalNQueens(int n) {
+        int res=0;
+        vector<int> row(n,-1);
+        helper(n,0,res,row);
+        return res;
+    }
+    void helper(int n,int start,int &res,vector<int> &row)
+    {
+        if(start==n)
+        {
+            res++;
+            return;
+        }
+        int i;
+        for(i=0;i<n;i++)
+        {
+            if(isValid(row,start,i))
+            {
+                row[start]=i;
+                helper(n,start+1,res,row);
+                row[start]=-1;
+            }
+        }
+    }
+    bool isValid(vector<int> &state,int row,int col)
+    {
+        size_t i;
+        for(i=0;i<state.size();i++)
+            if(state[i]==col||abs(i-row)==abs(state[i]-col))
+                return false;
+        return true;
+    }
+};
+
+int main()
+{
+    Solution s;
+    cout<<s.totalNQueens(8)<<endl;
+}

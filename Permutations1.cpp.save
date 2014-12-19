@@ -1,0 +1,30 @@
+#include<iostream>
+#include<vector>
+#include<cstring>
+using namespace std;
+
+class Solution {
+public:
+    vector<vector<int> > permute(vector<int> &num) {
+        vector<vector<int> > ret;
+        vector<int> path;
+        int n=num.size();
+        bool visited[n];
+        memset(visited,false,sizeof(visited));
+        helper(num,visited,ret,path);
+        return ret;
+    }
+    void helper(vector<int> &num,bool visited[],vector<vector<int> > &ret,vector<int> &path)
+    {
+        if(path.size()==num.size())
+        {
+            ret.push_back(path);
+            return;
+        }
+        int i;
+        for(i=0;i<num.size();i++)
+        {
+            if(visited[])
+        }
+    }
+};

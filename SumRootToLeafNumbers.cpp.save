@@ -1,0 +1,70 @@
+#include<iostream>
+#include<new>
+#include<vector>
+#include<sstream>
+#include<cstdlib>
+using namespace std;
+
+//Definition for binary tree
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution
+{
+public:
+    int sumNumbers(TreeNode *root) {
+        vector<int> vec;
+        int sum=0;
+        hasPathSum(root,vec);
+        for(auto a:vec)
+           sum+=a;
+        return sum;
+    }
+    void hasPathSum(TreeNode *root,vector<int> &path)
+    {
+        vector<int> tmp;
+        if(root==NULL)
+            return;
+        tmp.push_back(root->val);
+        if(root->left==NULL&&root->right==NULL)
+        {
+            int sum=0;
+            int size=tmp.size()-1;
+            for(int i=0;i<tmp.size();i++)
+                sum+=tmp[i]*size
+            path.push_back(c);
+        }
+        if(root->left)
+            hasPathSum(root->left,path);
+        if(root->right)
+            hasPathSum(root->right,path);
+    }
+    void createTree(TreeNode *&root)
+    {
+        int i;
+        cin>>i;
+        if(i!=0)
+        {
+            root=new TreeNode(i);
+            if(root==NULL)
+                return;
+            createTree(root->left);
+            createTree(root->right);
+        }
+    }
+};
+int main()
+{
+    Solution s;
+    TreeNode *root;
+    s.createTree(root);
+    int sum=s.sumNumbers(root);
+    cout<<sum<<endl;
+}
+
+

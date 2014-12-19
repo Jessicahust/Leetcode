@@ -1,0 +1,55 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+#include<climits>
+#include<cmath>
+using namespace std;
+
+class Solution
+{
+public:
+    int threeSumClosest(vector<int> &num, int target)
+    {
+        if(num.empty())
+            return 0;
+        sort(num.begin(),num.end());
+        int minSum=INT_MAX;
+        int n=num.size();
+        int i;
+        for(i=0; i<n-2; i++)
+        {
+            //只保留第一个不重复的，其余的都删了
+            if(i>=1&&num[i]==num[i-1])
+                continue;
+            int left=i+1;
+            int right=n-1;
+            while(left<right)
+            {
+                //删除重复元素
+                if(right>left&&right<n-1&&num[right+1]==num[right])
+                    right--;
+                else if(abs(num[i]+num[left]+num[right]-target)<minSum)
+                {
+                    minSum=abs(num[i]+num[left]+num[right]-target);
+                    left++;
+                    right--;
+                }
+            }
+        }
+        return ret;
+    }
+};
+int main()
+{
+    vector<int> vec= {-2,0,1,1,1,1,1,2};
+    Solution s;
+    vector<vector<int> > result=s.threeSum(vec);
+    for(auto a:result)
+    {
+        for(auto v:a)
+            cout<<v<<" ";
+        cout<<endl;
+    }
+    cout<<endl;
+}
+

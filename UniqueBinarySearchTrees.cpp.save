@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+class Solution {
+public:
+    int numTrees(int n) {
+        if(n==0)
+            
+    }
+};
+
+int main()
+{
+    Solution s;
+    cout<<s.numTrees(3)<<endl;
+}
+

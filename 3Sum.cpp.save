@@ -1,0 +1,66 @@
+#include<iostream>
+#include<vector>
+#include<map>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<vector<int> > threeSum(vector<int> &num)
+    {
+        vector<vector<int> >ret;
+        multimap<int,int> sum;
+        size_t i=0;
+        for(i=0; i<num.size(); i++)
+            sum.insert({num[i],i});
+        auto map_it=sum.begin();
+        while(map_it!=sum.end())
+        {
+            int target=-map_it->first;
+            auto sec=map_it;
+            sec++;
+            map<int,int>::iterator iter;
+            multimap<int,int> sum1(sec,sum.end());
+            while(sec!=sum.end())
+            {
+                int tmp=target-sec->first;
+                iter=sum.find(tmp);
+                if(iter!=sum.end())
+                {
+                    if(sec==iter)
+                        iter++;
+                    break;
+                }
+                sec++;
+            }
+            if(iter!=sum.end())
+            {
+                int j;
+                for(j=0;j<(int)ret.size();j++)
+                {
+                    vector<int> tmp={map_it->first,sec->first,iter->first};
+                    if(ret[j]==tmp)
+                        break;
+                }
+                if(j>=(int)ret.size())
+                    ret.push_back({map_it->first,sec->first,iter->first});
+            }
+            map_it++;
+        }
+        return ret;
+    }
+};
+
+int main()
+{
+    vector<int> vec={-1,0,1,2,-1,-4};
+    Solution s;
+    vector<vector<int> > result=s.threeSum(vec);
+    for(auto a:result)
+    {
+        for(auto v:a)
+            cout<<v<<" ";
+        cout<<endl;
+    }
+    cout<<endl;
+}

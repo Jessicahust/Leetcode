@@ -1,0 +1,39 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution
+{
+public:
+    bool searchMatrix(vector<vector<int> > &matrix, int target)
+    {
+        if(matrix.empty()||matrix[0].empty())
+            return false;
+        size_t i=0;
+        size_t j=matrix[0].size()-1;
+        int temp;
+        while(i<matrix.size()&&j>=0)
+        {
+            temp=matrix[i][j];
+            if(target==temp)
+                return true;
+            else if(target<temp)
+                j--;
+            else if(target>temp)
+                i++;
+        }
+        return false;
+    }
+};
+
+int main()
+{
+    Solution s;
+    vector<vector<int> > vec=
+    {
+        {-10},
+        {-7},
+        {-4}
+    };
+    cout<<s.searchMatrix(vec,-6)<<endl;
+}

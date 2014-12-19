@@ -1,0 +1,31 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution {
+public:
+    vector<vector<int> > permute(vector<int> &num) {
+        if(num.empty())
+            return vector<vector<int> >();
+        vector<vector<int> > ret{{num[0]}};
+        int i,j,k;
+        for(i=1;i<num.size();i++)
+        {
+            vector<int> temp1;
+            vector<vector<int> > temp2=ret;
+            ret.clear();
+            for(j=0;j<temp2.size();j++)
+            {
+                temp1=temp2[j];
+                auto iter=temp1.begin();
+                while(iter!=temp1.end())
+                { 
+                    temp1.insert(iter,num[1])
+                    ret.push_back(temp1);
+                }
+                temp1.insert(iter,num[1]);
+                ret.push_back(temp1);
+            }
+        }
+    }
+};

@@ -1,0 +1,25 @@
+#include<iostream>
+#include<climits>
+using namespace std;
+
+class Solution {
+public:
+    int reverse(int x) {
+        int flag=1;
+        if(x<0) 
+        {
+            x=-x;
+            flag=-1;
+        }
+        int arr[100]={-1};
+        long long i=1;
+        int j=0;
+        while(i<=x)
+        {
+            i*=10;
+            j++;
+        }
+        i=i/10;
+        
+    }
+};

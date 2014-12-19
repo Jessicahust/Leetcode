@@ -1,0 +1,32 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<vector<int> > generateMatrix(int n)
+    {
+        if(n==0)
+            return vector<vector<int> >();
+        int i,j;
+        int count=1;
+        i=0,j=0;
+        while(count<n*n)
+        {
+            for(;j<n)
+        }
+    }
+
+};
+
+int main()
+{
+    Solution s;
+    vector<vector<int> > vec= {{1,2,3,4,5,6}};
+    vector<int> result=s.spiralOrder(vec);
+    for(auto a:result)
+        cout<<a<<" ";
+    cout<<endl;
+}
+

@@ -1,0 +1,56 @@
+#include<iostream>
+#include<set>
+#include<vector>
+using namespace std;
+
+class Solution
+{
+public:
+    bool isValidSudoku(vector<vector<char> > &board)
+    {
+        set<char> st;
+        int i,j;
+        for(i=0; i<9; i++)
+        {
+            st.clear();
+            for(j=0; j<9; j++)
+            {
+                st.insert(board[i][j]);
+            }
+            if(st.size()<9)
+                return false;
+        }
+        for(i=0; i<9; i++)
+        {
+            st.clear();
+            for(j=0; j<9; j++)
+            {
+                st.insert(board[j][i]);
+            }
+            if(st.size()<9)
+                return false;
+        }
+        int block=0;
+        for(block=0; block<9; block++)
+        {
+            for(i=block/3*3; i<block/3*3+3; i++)
+            {
+                st.clear();
+                for(j=block%3*3; j<block%3*3+3; j++)
+                {
+                    st.insert(board[i][j]);
+                }
+                if(st.size()<9)
+                    return false;
+            }
+        }
+        return true;
+    }
+};
+
+int main()
+{
+    Solution s;
+    vector<vector<int> >
+    s.isValidSudoku()
+}

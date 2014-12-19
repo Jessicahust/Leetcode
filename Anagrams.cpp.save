@@ -1,0 +1,30 @@
+#include<iostream>
+#include<map>
+#include<vector>
+#include<string>
+#include<algorithm>
+using namespace std;
+
+class Solution {
+public:
+    vector<string> anagrams(vector<string> &strs) {
+        if(strs.empty())
+            return vector<string>();
+        map<string,int> mp;
+        vector<string> ret;
+        size_t i;
+        for(i=0;i<strs.size();i++)
+        {
+            string s=strs[i];
+            sort(s.begin(),s.end());
+            if(find(mp.begin(),mp.end())==mp.end())
+            {
+                mp[s]=i;
+            }
+            else
+            {
+                
+            }
+        }
+    }
+};

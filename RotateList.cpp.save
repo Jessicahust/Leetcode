@@ -1,0 +1,88 @@
+#include<iostream>
+#include<new>
+using namespace std;
+
+//Definition for singly-linked list.
+struct ListNode
+{
+    int val;
+    ListNode *next;
+    ListNode(int x) : val(x), next(NULL) {}
+};
+class Solution
+{
+public:
+    ListNode *rotateRight(ListNode *head, int k)
+    {
+        if(head==NULL||head->next==NULL)
+            return head;
+        ListNode *p=head;
+        ListNode *q=head;
+        int len=0;
+        while(p)
+        {
+            len++;
+            p=p->next;
+        }
+        p=head;
+        k=k%len;
+        while(q)
+        {
+            if(k==0)
+            {
+               q=q->next; 
+               p=p->next;
+            }
+            else
+            {
+                k--;
+                q=q->next;
+            }
+            
+        }
+        cout<<p->val<<endl;
+        return head;
+    }
+    void createList(ListNode *&head)
+    {
+        ListNode *p=NULL;
+        int i=0;
+        int arr[10]= {6,5,5,4,4,3,3,3,2,2};
+        for(i=0; i<10; i++)
+        {
+            if(head==NULL)
+            {
+                head=new ListNode(arr[i]);
+                if(head==NULL)
+                    return;
+            }
+            else
+            {
+                p=new ListNode(arr[i]);
+                p->next=head;
+                head=p;
+            }
+        }
+    }
+};
+
+int main()
+{
+    Solution s;
+    ListNode *L=NULL;
+    s.createList(L);
+    ListNode *head=L;
+    while(head)
+    {
+        cout<<head->val<<" ";
+        head=head->next;
+    }
+    cout<<endl;
+    L=s.rotateRight(L,4);
+    while(L)
+    {
+        cout<<L->val<<" ";
+        L=L->next;
+    }
+}
+

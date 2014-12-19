@@ -1,0 +1,35 @@
+#include<iostream>
+#include<unordered_set>
+#include<string>
+#include<cstring>
+#include<vector>
+using namespace std;
+
+class Solution
+{
+public:
+    vector<string> wordBreak(string s, unordered_set<string> &dict)
+    {
+        vector<string> ret;
+        if(s.empty()||dict.empty())
+            return ret;
+        string path;
+        helper(s,dict,ret,path);
+    }
+    void helper(string s,unordered_set<string> &dict,vector<string> &ret,string &path)
+    {
+        if()
+    }
+};
+
+int main()
+{
+    unordered_set<string> dict= {"cat", "cats", "and", "sand", "dog"};
+    Solution s;
+    string ss = "catsanddog";
+    vector<string> result=s.wordBreak(ss,dict);
+    for(auto a:result)
+        cout<<a<<endl;
+}
+
+

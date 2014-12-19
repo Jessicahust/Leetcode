@@ -1,0 +1,16 @@
+#include<iostream>
+#include<vector>
+#include<map>
+using namespace std;
+
+class Solution {
+public:
+    int longestConsecutive(vector<int> &num) {
+        if(num.empty())
+            return 0;
+        map<int,int> mp(num.size());
+        int i;
+        for(i=0;i<(int)num.size();i++)
+            mp[num[i]
+    }
+};

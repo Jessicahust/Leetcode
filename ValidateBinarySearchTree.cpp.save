@@ -1,0 +1,51 @@
+#include<iostream>
+#include<new>
+#include<vector>
+using namespace std;
+
+//Definition for binary tree
+struct TreeNode
+{
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+    TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+};
+
+class Solution
+{
+public:
+    bool isValidBST(TreeNode *root)
+    {
+        if(root==NULL)
+            return true;
+        if(root->left&&root->right)
+            return (root->left->val<root->val)&&(root->val<root->right->val)&&isValidBST(root->left)&&isValidBST(root->right);
+        else if(root->left)
+            return (root->left->val<root->val)&&isValidBST(root->left);
+        else if(root->right)
+            return (root->val<root->right->val)&&isValidBST(root->right);
+    }
+    void createTree(TreeNode *&root)
+    {
+        int i;
+        cin>>i;
+        if(i!=0)
+        {
+            root=new TreeNode(i);
+            if(root==NULL)
+                return;
+            createTree(root->left);
+            createTree(root->right);
+        }
+    }
+};
+
+int main()
+{
+    Solution s;
+    TreeNode *root;
+    s.createTree(root);
+    cout<<s.isValidBST(root)<<endl;
+}
+

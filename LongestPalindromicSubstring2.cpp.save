@@ -1,0 +1,64 @@
+#include<iostream>
+#include<string>
+#include<cstring>
+using namespace std;
+
+class Solution
+{
+public:
+    string longestPalindrome(string s)
+    {
+        if(s.empty())
+            return NULL;
+        string T=process(s);
+        int n=T.length();
+        int C=0,R=0;
+        int *p=new int(n);
+        int i;
+        for(i=1;i<n-1;i++)
+        {
+            int i_mirror=2*C-i;
+            p[i]=(R>i)?(min(p[i_mirror],R-i)):0;
+            while(T[C+p[i]+1]==T[C-p[i]-1])
+                p[i]++;
+            if(i+p[i]>R)
+            {
+                C=i;
+                R=i+p[i];
+            }
+        }
+        int maxlen=0;
+        int centerIndex=0;
+        for(i=0;i<n-1;i++)
+        {
+            if(p[i]>maxlen)
+            {
+                maxlen=p[i];
+                centerIndex=i;
+            }
+        }
+        return s.substr(start,end-start+1);
+    }
+    string process(string s)
+    {
+        string T;
+        int n=s.length();
+        int i;
+        T.push_back('#');
+        for(i=0;i<n;i++)
+        {
+            T.push_back(s[i]);
+            T.push_back('#');
+        }
+        return T;
+    }
+};
+
+int main()
+{
+    string s1="bbb";
+    Solution s;
+    cout<<s.longestPalindrome(s1)<<endl;
+}
+
+

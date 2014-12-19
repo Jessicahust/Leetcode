@@ -1,0 +1,13 @@
+#include<iostream>
+#include<vector>
+#include<cmath>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> grayCode(int n) {
+        vector<int> ret;
+        int i;
+        for(i=0;i<pow(2,n))
+    }
+};

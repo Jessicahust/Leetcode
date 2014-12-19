@@ -1,0 +1,55 @@
+#include<iostream>
+#include<vector>
+#include<string>
+#include<map>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> findSubstring(string S, vector<string> &L) {
+        if(S.empty()||L.empty())
+            return vector<int>();
+        vector<int> ret;
+        int n=L[0].size();
+        map<string,int> mp;
+        map<string,int> word;
+        size_t i;
+        for(i=0;i<L.size();i++)
+            mp[L[i]]++;
+        size_t idx=0;
+        while(idx<S.length()-n)
+        {
+            int flag=true;
+            for(i=idx;i<=idx+n*(L.size()-1);i+=n)
+            {
+                word.clear();
+                string tmp=S.substr(i,n);
+                if(mp.find(tmp)==mp.end())
+                {
+                    flag=false;
+                    break;
+                }
+                word[tmp]++;
+                if(word[tmp]>mp[tmp])
+                {
+                    flag=false;
+                    break;
+                }
+            }
+            if(flag)
+                ret.push_back(idx);
+            idx++;
+        }
+        return ret;
+    }
+};
+
+int main()
+{
+    Solution s;
+    vector<string> L={"foo", "bar"};
+    vector<int> result=s.findSubstring(string("barfoothefoobarman"),L);
+    for(auto a:result)
+        cout<<a<<" ";
+    cout<<endl;
+}

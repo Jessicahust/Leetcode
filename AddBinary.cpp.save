@@ -1,0 +1,107 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+class Solution
+{
+public:
+    string addBinary(string a, string b)
+    {
+        int size1=a.size()-1;
+        int size2=b.size()-1;
+        int size=max(size1,size2);
+        string digits(size+1,'0');
+        cout<<digits<<endl;
+        while(size1>=0&&size2>=0)
+        {
+            if((a[size1]=='1')&&(b[size2]=='1'))
+            {
+                digits[size-1]='1';
+                size1--;
+                size2--;
+                size--;
+            }
+            else if(((a[size1]=='1')||(b[size2]=='1'))&&(digits[size]=='0'))
+            {
+                cout<<digits<<endl;
+                digits[size]='1';
+                size1--;
+                size2--;
+                size--;
+            }
+            else if(((a[size1]=='1')||(b[size2]=='1'))&&(digits[size]=='1'))
+            {
+                cout<<digits<<endl;
+                digits[size]='0';
+                digits[size-1]='1';
+                size1--;
+                size2--;
+                size--;
+            }
+        }
+        cout<<digits<<endl;
+        if(size1>=0)
+        {
+            cout<<"size1  "<<digits<<endl;
+            while(size1>=0&&size>=0)
+            {
+                if((digits[size]=='1')&&(a[size1]=='1'))
+                {
+                    digits[size]='0';
+                    digits[size-1]='1';
+                    size1--;
+                    size--;
+                }
+                else if((digits[size]=='1')&&(a[size1]=='0'))
+                {
+                    size1--;
+                    size--;
+                }
+                else
+                {
+                    digits[size]=a[size1];
+                    size--;
+                    size1--;
+                }
+            }
+        }
+        if(size2>=0)
+        {
+            while(size2>=0&&size>=0)
+            {
+                if((digits[size]=='1')&&(b[size2]=='1'))
+                {
+                    digits[size]='0';
+                    digits[size-1]='1';
+                    size2--;
+                    size--;
+                }
+                else if((digits[size]=='1')&&(b[size2]=='0'))
+                {
+                    size2--;
+                    size--;
+                }
+                else
+                {
+                    digits[size]=a[size2];
+                    size--;
+                    size2--;
+                }
+            }
+        }
+        size++;
+        size1++
+        if(digits[])
+            digits.insert(digits.begin(),'1');
+        return digits;
+    }
+};
+
+int main()
+{
+    string b="111111";
+    string a="1111";
+    Solution s;
+    cout<<s.addBinary(a,b)<<endl;
+}

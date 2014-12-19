@@ -1,0 +1,54 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+class Solution
+{
+public:
+    int minCut(string s)
+    {
+        vector<string> path;
+        size_t i=0;
+        size_t j=1;
+        while(i<s.size()&&j<=s.size())
+        {
+            string tmp=s.substr(i,j);
+            if(isPalindrome(tmp))
+            {
+                j++;
+            }
+            else
+            {
+                tmp=s.substr(i,j-1);
+                path.push_back(tmp);
+                i=i+j-1;
+            }
+        }
+        return (int)path.size();
+    }
+    bool isPalindrome(string s)
+    {
+        if(s.empty())
+            return true;
+        int i=0;
+        int j=s.length()-1;
+        while(i<=j)
+        {
+            if(s[i]!=s[j])
+                return false;
+            i++;
+            j--;
+        }
+        if(i>j)
+            return true;
+        return false;
+    }
+};
+
+int main()
+{
+    Solution s;
+    int result=s.minCut(string("aabchabch"));
+    cout<<result<<endl;
+}

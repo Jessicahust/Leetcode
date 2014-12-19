@@ -1,0 +1,22 @@
+#include<iostream>
+#include<vector>
+using namespace std;
+
+class Solution {
+public:
+    void solve(vector<vector<char>> &board) {
+        if(board.empty()||board[0].empty())
+            return;
+        int row=board.size();
+        int col=board[0].size();
+        int i,j;
+        for(i=0;i<row;i++)
+        {
+            dfs
+        }
+    }
+    void dfs(int row,int col,vector<vector<char> > &board)
+    {
+        if(row<0|)
+    }
+};

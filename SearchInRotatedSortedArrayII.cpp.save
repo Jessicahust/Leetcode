@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class Solution
+{
+public:
+    int search(int A[], int n, int target)
+    {
+        int i;
+        for(i=0;i<n;i++)
+        {
+            if()
+        }
+        if(left>right)
+            return -1;
+        else
+            return mid;
+    }
+};
+
+int main()
+{
+    Solution s;
+    int A[10]= {2,3,4,5,6,7,8,9,10,1};
+    cout<<s.search(A,10,5)<<endl;
+}
